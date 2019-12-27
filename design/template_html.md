@@ -11,4 +11,15 @@ If I can somehow factor the start and end of every html file and put them in a *
 
 2. Use jquery javascript and keep the *.html* extension [StackOverflow](https://stackoverflow.com/questions/34238131/how-to-separate-html-text-file-into-multiple-files)
 
-3. Makefiles and Python Scripts to automate the manual labour of changing every html file. This is messy and prone to error so no thanks
+3. Makefiles and Python Scripts to automate the manual labour of changing every html file. 
+
+After a hour or two of looking around, there doesn't appear to be an easy way to do this without using server-side logic. Way number 2 only seems to work for dividing up the body and not the header. 
+
+So Python Scripts it is.
+
+#### 'update_template.py' 
+
+In **scripts**, *update_template.py* python script automatically traverses and updates relevant html files with the altered *template_code.html* . It does this by replacing the code of each relevant html file with the altered code in *template_code.html* It uses **<!-- Page Header -->** and **<!-- Footer -->** to let the script know that it should replace the code above and below respectively. 
+
+Another useful feature is to check that the part above the Page Header and Below the Footer are the same. This allows me to debug faster. Although it means that the top and bottom of every html file must be the same. All the relevant html files are listed in the **metadata** folder under *list_of_html.txt*.
+
