@@ -27,3 +27,5 @@ The downside is that the top and bottom of every html file must be the same. All
 
 **TODO:** The script should ignore the *title* at the top, it would be nice to have a custom title for every page. 
 
+**2019-12-29 UPDATE:** Since this is hosted on github pages, the php backend of the *contact.html* doesn't work. Instead, I will be implementing this static html form found on [Github](https://github.com/toperkin/staticFormEmails). This also means that I can add the brand new contact.html to the *list_of_html.txt* file.
+
