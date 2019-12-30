@@ -6,3 +6,6 @@ I have tried to embed google forms but that does not work either.
 Honestly, adding an embedded form is too much hassle. Most people who come to my website are there to see what I can do and they want my contact information anyways. 
 
 So instead of a form, I have decided to put my contact information instead. 
+
+**UPDATE:**
+Google form works! It just took a long time before the hosted website reflected the code. I will keep the google form
