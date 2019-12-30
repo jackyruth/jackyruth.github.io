@@ -3,27 +3,27 @@
 ## Purpose
 This is a multi-purpose website
 1. A medium, to showcase my skills, experiences and education
-2. A portfolio, to house my personal engineering projects
-3. A blog, to share preserve and timestamp, my thoughts
+2. A blog, to share, preserve and timestamp my thoughts
+3. A portfolio, to house my personal engineering projects
 4. A channel, for others to contact me
 
-# Design 
+## Design 
 The nav bar will contain the following sections which corresponds one-to-one with the purpose of my website. To maintain simple usage, there will be *no drop down bars* 
 1. About: 
 	* A quick description of me
 	* Link to my resume and my LinkedIn
-2. Projects: 
-	* A grid like display of all my projects
-	* Clicking on a particular project opens a new html file in a new tab
-	* Include a *back* button to return to the main **project** page
-	* Future: Add a side bar which can filter the projects displayed by *type of project* (ex. Physics, Programming, Hardware)
-3. Posts: 
+2. Writings: 
 	* A scrolling list of blog posts
 	* Clicking on a particular blog post opens a new html file in a new tab
 	* Include a *back* button to return to the main **posts** page
 	* Future: Add a side bar which can filter the posts by topic
+3. Projects: 
+	* A grid like display of all my projects
+	* Clicking on a particular project opens a new html file in a new tab
+	* Include a *back* button to return to the main **project** page
+	* Future: Add a side bar which can filter the projects displayed by *type of project* (ex. Physics, Programming, Hardware)
 4. Contact
-	* An embedded form with *Topic*, *Email Address* and *Message* fields
+	* An embedded form with *Name*, *Email Address* and *Message* fields
 
 # Template 
 My personal website is built ontop of an existing Bootstrap template. You can see information about the template below (it is taken directly from the template's github page)
