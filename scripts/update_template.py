@@ -1,6 +1,6 @@
 import os
 filepath = "../metadata/list_of_html.txt"
-template_path = "../design/template_code.html"
+template_path = "../metadata/templates/template_code.html"
 replace_above_cw = "<!-- Page Header -->"
 replace_below_cw = "<!-- Footer -->"
 
