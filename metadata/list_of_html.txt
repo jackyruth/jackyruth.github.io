@@ -1,3 +1,2 @@
 contents/*
-contact.html
 index.html

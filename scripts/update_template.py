@@ -41,25 +41,30 @@ def get_template():
 def apply_changes(filename,top_str,bottom_str):
 	middle_str = get_middle(filename)
 	if(filename.strip()[-4:] == "html"):
-		print(filename)
-		print(top_str)
-		print(middle_str)
-		print(bottom_str)
-		#with open(filename, "w", encoding= 'utf-8') as fp:
-
-		#return 1
+		with open(filename, "w", encoding= 'utf-8') as fp:
+			fp.write(top_str)
+			fp.write(middle_str)
+			fp.write(bottom_str)
+		return 1
 	else:
 		return 0
 
 def loop_thro_html(path_to_file,top_str,bottom_str):
+	changed_files = 0
+	list_of_changed_files = []
 	if(path_to_file[-2:] == "/*"):
 		for dirName, subdirList, fileList in os.walk("../"+path_to_file[:-2]):
 			for fname in fileList:
 				path = dirName + "/" + fname
-				apply_changes(path.replace("\\","/"),top_str,bottom_str)
+				list_of_changed_files.append(path.replace("\\","/"))
+				changed_files += apply_changes(path.replace("\\","/"),top_str,bottom_str)
 	else:
-		apply_changes("../" + path_to_file,top_str,bottom_str)
-
+		list_of_changed_files.append("../" + path_to_file)
+		changed_files += apply_changes("../" + path_to_file,top_str,bottom_str)
+	print("Done, number of changed files: " + str(changed_files))
+	print("List of changed files")
+	print('\n'.join(list_of_changed_files))
+	print("\n")
 
 (top_str, bottom_str) = get_template()
 list_of_paths = []

@@ -21,5 +21,9 @@ So Python Scripts it is.
 
 In **scripts**, *update_template.py* python script automatically traverses and updates relevant html files with the altered *template_code.html* . It does this by replacing the code of each relevant html file with the altered code in *template_code.html* It uses **<!-- Page Header -->** and **<!-- Footer -->** to let the script know that it should replace the code above and below respectively. 
 
-Another useful feature is to check that the part above the Page Header and Below the Footer are the same. This allows me to debug faster. Although it means that the top and bottom of every html file must be the same. All the relevant html files are listed in the **metadata** folder under *list_of_html.txt*.
+The downside is that the top and bottom of every html file must be the same. All the relevant html files are listed in the **metadata** folder under *list_of_html.txt*. Another limitation is that all html files must have the *.html* ending.
+
+*contact.html* is the only html file that has a different footer. Instead of accounting for it in the python script, I removed contact.html from the *list_of_html.txt*. It doesn't take too long to manually update just the contact.html.
+
+**TODO:** The script should ignore the *title* at the top, it would be nice to have a custom title for every page. 
 
