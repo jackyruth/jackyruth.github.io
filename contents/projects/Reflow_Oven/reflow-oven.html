@@ -1,4 +1,4 @@
-<!-- JJ | My First Project -->
+<!-- JJ | Reflow Oven -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-<title> JJ | My First Project </title>
+<title> JJ | Reflow Oven </title>
   <!-- Bootstrap core CSS -->
   <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -60,17 +60,17 @@
 
 
   <!-- Main Content goes here -->
- <header class="masthead" style="background-image: url('/img/post-bg.jpg')">
+ <header class="masthead" style="background-image: url('/contents/projects/Reflow_Oven/image003.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Man must explore, and this is exploration at its greatest</h1>
-            <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
-            <span class="meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on August 24, 2019</span>
+            <h1>Reflow Oven Controller</h1>
+            <h2 class="subheading">Using a regular oven to reflow PCBs </h2>
+            <span class="meta">Engineering lab course
+              <a href="#"></a>
+              | Feburary, 2018</span>
           </div>
         </div>
       </div>
@@ -80,42 +80,63 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+          <div class=WordSection1>
 
-          <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
+          <p class=MsoNormal><span style='font-size:12.0pt;line-height:106%'>A reflow
+          oven must follow a certain temperature curve to properly bake PCBs. The goal
+          of this project is to make a control unit to control the temperature of the
+          oven to follow the reflow temperature curve.&nbsp; </span></p>
 
-          <p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
+          <p class=MsoNormal align=center style='text-align:center'><span
+          style='font-size:12.0pt;line-height:106%'><img width=497 height=238
+          id="Picture 3" src="/contents/projects/Reflow_Oven/image001.png"></span></p>
 
-          <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
+          <p class=MsoNormal align=center style='text-align:center'><span
+          style='font-size:12.0pt;line-height:106%'>Figure 1: Completed Oven Controller</span></p>
 
-          <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
+          <p class=MsoNormal><span style='font-size:12.0pt;line-height:106%'>We used a
+          solid-state relay to turn the oven on and off for temperature control. We used
+          a thermocouple to detect the temperature in the oven and graphed it on top of
+          the reflow temperature profile.</span></p>
 
-          <h2 class="section-heading">The Final Frontier</h2>
+          <p class=MsoNormal align=center style='text-align:center'><span
+          style='font-size:12.0pt;line-height:106%'><img width=542 height=359
+          id="Picture 2" src="/contents/projects/Reflow_Oven/image002.jpg"></span></p>
 
-          <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+          <p class=MsoNormal align=center style='text-align:center'><span
+          style='font-size:12.0pt;line-height:106%'>Figure 2: The reflow oven temperature
+          graph. Current temperature is displayed in green. The reflow temperature
+          profile displayed behind the current temperature</span></p>
 
-          <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+          <p class=MsoNormal><span style='font-size:12.0pt;line-height:106%'>As you can
+          see, the temperature is not following the profile very well. This is because
+          heating/cooling follows an exponential curve, making them difficult to control.
+          I started recording data about how fast the temperature changes versus how high
+          the temperature is. I made a few hypotheses, tested them and implemented my
+          findings to the control logic. The result is a much more accurate oven
+          controller. The improved controller shown in figure 3 is quite obviously
+          superior to the controller shown in figure 2.</span></p>
 
-          <blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
+          <p class=MsoNormal align=center style='text-align:center'><span
+          style='font-size:12.0pt;line-height:106%'><img width=485 height=364
+          id="Picture 1" src="/contents/projects/Reflow_Oven/image003.jpg"></span></p>
 
-          <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
+          <p class=MsoNormal align=center style='text-align:center'><span
+          style='font-size:12.0pt;line-height:106%'>Figure 3: Oven Controller improved
+          with my tests and findings</span></p>
 
-          <h2 class="section-heading">Reaching for the Stars</h2>
+          <p class=MsoNormal><span style='font-size:12.0pt;line-height:106%'>The oven
+          controller worked wonderfully and successfully churned out the surface-mount
+          microcontroller shown in figure 4.</span></p>
 
-          <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+          <p class=MsoNormal align=center style='text-align:center'><img width=410
+          height=169 id="Picture 4" src="/contents/projects/Reflow_Oven/image004.jpg"><span
+          style='font-size:12.0pt;line-height:106%'><br clear=all>
+          Figure 4: EFM8 surface mount microcontroller</span></p>
 
-          <a href="#">
-            <img class="img-fluid" src="/img/post-sample-image.jpg" alt="">
-          </a>
-          <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+          <p class=MsoNormal>&nbsp;</p>
 
-          <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
-
-          <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
-
-          <p>Placeholder text by
-            <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by
-            <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
+          </div>
         </div>
       </div>
     </div>

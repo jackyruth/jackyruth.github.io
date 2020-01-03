@@ -51,9 +51,9 @@ def get_template(filename):
 	return (top_str,bottom_str)
 
 def apply_changes(filename):
-	middle_str = get_middle(filename)
-	(top_str,bottom_str) = get_template(filename)
 	if(filename.strip()[-4:] == "html"):
+		middle_str = get_middle(filename)
+		(top_str,bottom_str) = get_template(filename)
 		with open(filename, "w", encoding= 'utf-8') as fp:
 			fp.write(top_str)
 			fp.write(middle_str)
@@ -70,9 +70,11 @@ def loop_thro_html(path_to_file):
 			for fname in fileList:
 				path = dirName + "/" + fname
 				list_of_changed_files.append(path.replace("\\","/"))
+				print((path.replace("\\","/")))
 				changed_files += apply_changes(path.replace("\\","/"))
 	else:
 		list_of_changed_files.append("../" + path_to_file)
+		print("../" + path_to_file)
 		changed_files += apply_changes("../" + path_to_file)
 	print("Done, number of changed files: " + str(changed_files))
 	print("List of changed files")

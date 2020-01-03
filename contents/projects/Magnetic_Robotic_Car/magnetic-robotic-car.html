@@ -1,0 +1,235 @@
+<!-- JJ | Robotic Car -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+<title> JJ | Robotic Car </title>
+  <!-- Bootstrap core CSS -->
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="/css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="/index.html">Jacky Jiang</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contents/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contents/writings_home.html">Writings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contents/projects_home.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+
+
+
+  <!-- Main Content goes here -->
+ <header class="masthead" style="background-image: url('/contents/projects/Magnetic_Robotic_Car/mast_pic.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Magnetic Robotic Car</h1>
+            <h2 class="subheading">Using custom transceiver, reciever circuits to control a car through the magnetic field</h2>
+            <span class="meta">Engineering lab course
+              <a href="#"></a>
+              | April, 2018</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+			<div class=WordSection1>
+
+			<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:106%'>&nbsp;</span></b></p>
+
+			<p class=MsoNormal><span style='font-size:12.0pt;line-height:106%'>The goal of
+			this project is to construct a minimalistic car with 5 instructions: forwards, backwards,
+			left, right and stop. These instructions must be communicated using a
+			transmitter and a receiver circuit. I made the transmitter and receiver circuit
+			while the rest of the team worked on the car.</span></p>
+
+			<p class=MsoNormal><span style='font-size:12.0pt;line-height:106%'>The
+			transmitter circuit is a simple RLC series circuit that is being driven with a
+			H bridge at the RLC circuit's oscillation frequency. In figure 1, the circuit
+			in focus is the transmitter circuit. You can see the H bridge directly below
+			and to the left of the massive inductor-capacitor pair. You can also see two
+			BJTs responsible for operating the gates of the MOSFETs. The BJTs are driven by
+			the microcontroller shown on the left. </span></p>
+
+			<p class=MsoNormal align=center style='text-align:center'><span
+			style='font-size:12.0pt;line-height:106%;mso-no-proof:yes'><img width=545
+			height=545 id="_x0000_i1029" src="/contents/projects/Magnetic_Robotic_Car/image001.jpg"></span></p>
+
+			<p class=MsoNormal align=center style='text-align:center'><span
+			style='font-size:12.0pt;line-height:106%'>Figure 1: Transmitter Circuit</span></p>
+
+			<p class=MsoNormal><span style='font-size:12.0pt;line-height:106%'>It took some
+			simple calculations to find the optimal capacitance value which was 0.047 uF
+			capacitor. Along with the 1mH inductor, the voltage produced across the
+			inductor reached 800 volts peak to peak (with a 9 volt power supply), drew 1.4
+			amps and oscillated at 21.8 kHz.</span></p>
+
+			<p class=MsoNormal><span style='font-size:12.0pt;line-height:106%'>&nbsp;</span></p>
+
+			<p class=MsoNormal><span style='font-size:12.0pt;line-height:106%'>The receiver
+			circuit was considerably more difficult to design. In figure 2, I drew out the
+			main components of the receiver circuit. Going from left to right, the receiver
+			circuit is composed of a tank circuit which feeds its output into two amplifiers
+			cascaded together. The amplified signal is then sent through a simple diode
+			rectifier whose output is then compared to 2.5 volts with a comparator. The
+			output of the comparator would be 1 if there is a magnetic field and 0 if there
+			is not.</span></p>
+
+			<p class=MsoNormal align=center style='text-align:center'><span
+			style='font-size:12.0pt;line-height:106%;mso-no-proof:yes'><img width=624
+			height=468 id="_x0000_i1028" src="/contents/projects/Magnetic_Robotic_Car/image002.jpg"></span></p>
+
+			<p class=MsoNormal align=center style='text-align:center'><span
+			style='font-size:12.0pt;line-height:106%'>Figure 2: Receiver Circuit Schematic</span></p>
+
+			<p class=MsoNormal><span style='font-size:12.0pt;line-height:106%'>Besides the
+			main design, several peripheral components were added such as a high pass
+			filter to remove any dc component coming from the tank circuit and extra
+			capacitors to further separate the power and ground lines. We also fed the
+			output through a NOT gate because the signal being sent is a NOT-ed version of
+			the signal we want. This is because of the UART communication protocol keeps
+			the signal output high even when nothing is being sent to signal that the
+			communication channel is not broken. We do not want this because the inductor
+			heats up and increases its resistance when its sending a high signal. The NOT
+			gates are there to keep the inductor cool. </span></p>
+
+			<p class=MsoNormal align=center style='text-align:center'><span
+			style='font-size:12.0pt;line-height:106%;mso-no-proof:yes'><img width=565
+			height=753 id="_x0000_i1027" src="/contents/projects/Magnetic_Robotic_Car/image003.jpg"></span></p>
+
+			<p class=MsoNormal align=center style='text-align:center'><span
+			style='font-size:12.0pt;line-height:106%'>Figure 3: (Left) Receiver circuit,
+			(right) motor driver for the car</span></p>
+
+			<p class=MsoNormal><span style='font-size:12.0pt;line-height:106%'>After the
+			transmission quality is to my satisfaction, the team integrated their hacked,
+			NES controller with my transmitter circuit.</span></p>
+
+			<p class=MsoNormal align=center style='text-align:center'><span
+			style='font-size:12.0pt;line-height:106%;mso-no-proof:yes'><img width=453
+			height=737 id="_x0000_i1026" src="/contents/projects/Magnetic_Robotic_Car/image004.png"></span></p>
+
+			<p class=MsoNormal align=center style='text-align:center'><span
+			style='font-size:12.0pt;line-height:106%'>Figure 4: Controlling the Car with an
+			NES controller</span></p>
+
+			<p class=MsoNormal><span style='font-size:12.0pt;line-height:106%'>&nbsp;</span></p>
+
+			<p class=MsoNormal><span style='font-size:12.0pt;line-height:106%'>An issue
+			that came up was the loose connection the motor's multithread wires had to the
+			breadboard. We made the connections robust by soldering the multithread wires
+			to solid core wires. Then we put it all together. </span></p>
+
+			<p class=MsoNormal align=center style='text-align:center'><span
+			style='font-size:12.0pt;line-height:106%;mso-no-proof:yes'><img width=499
+			height=666 id="_x0000_i1025" src="/contents/projects/Magnetic_Robotic_Car/image005.jpg"></span></p>
+
+			<p class=MsoNormal align=center style='text-align:center'><span
+			style='font-size:12.0pt;line-height:106%'>Figure 5: Completed Car</span></p>
+
+			<p class=MsoNormal><span style='font-size:12.0pt;line-height:106%'>The car was responsive
+			to commands, it executes all 5 instructions flawlessly and it has the longest
+			range (3.5 meters) of all the cars in my year. We obtained 95% on this project.</span></p>
+
+			</div>
+		</div>
+	</div>
+  </article>
+
+  <hr>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://medium.com/@jackyruthjiang">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-medium fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/yuzheng-jiang/">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/jackyruth">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Jacky Jiang 2019</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="/js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

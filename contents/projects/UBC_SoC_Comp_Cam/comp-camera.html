@@ -1,0 +1,587 @@
+<!-- JJ | Computional Camera -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+<title> JJ | Computional Camera </title>
+  <!-- Bootstrap core CSS -->
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="/css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="/index.html">Jacky Jiang</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contents/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contents/writings_home.html">Writings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contents/projects_home.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+
+
+
+  <!-- Main Content goes here -->
+ <header class="masthead" style="background-image: url('/contents/projects/UBC_SoC_Comp_Cam/image007.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Computational Camera</h1>
+            <h2 class="subheading">Exercising a novel hardware based computational image sensor</h2>
+            <span class="meta">Hardware Research Assistant 
+              <a href="#"></a>
+              | May - December, 2018</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class=WordSection1>
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=623
+          height=623 id="Picture 7" src="/contents/projects/UBC_SoC_Comp_Cam/image001.jpg"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 1: Final Dual
+          Camera Platform</p>
+
+          <h1>Part 1: Creating the PCBs</h1>
+
+          <p class=MsoNormal>Starting from the summer of 2018, I had the privilege to
+          work in UBC's SoC Lab with a PhD student Roy Luo under the supervision of
+          Professor Shahriar Mirabbasi. Roy's doctorial thesis is based on his design of
+          a new CMOS camera chip. My role in this project is to verify the chip's
+          functionality and create an attractive platform, mainly for the purpose of
+          demoing the chip to potential future partners.</p>
+
+          <p class=MsoNormal style='text-indent:.5in'>&nbsp;</p>
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=623
+          height=623 id="Picture 9" src="/contents/projects/UBC_SoC_Comp_Cam/image002.jpg"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 2: Roy's CMOS
+          camera chip, the dimensions are 128 x 128 pixels (ASIC)</p>
+
+          <p class=MsoNormal>We wish to use a commercial HD camera as a point of
+          comparison. So new Printed Circuit Boards (PCB) are needed. I set out to make
+          them in Altium Designer. I fear the schematic contains too much confidential
+          information to be shown here, but I can show you the PCB design.</p>
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=305
+          height=466 id="Picture 10" src="/contents/projects/UBC_SoC_Comp_Cam/image003.png"><img
+          width=315 height=464 id="Picture 11"
+          src="/contents/projects/UBC_SoC_Comp_Cam/image004.png"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 3: Main PCB
+          board with routing. Route width optimization and hashed ground polygon layers
+          were added later</p>
+
+
+          <p class=MsoNormal>After we received the PCB, Roy soldered all the components
+          on and created the dual camera platform shown in figure 4. There are three PCBs
+          in this platform, which figure 5 shows readily. The bottom layer is simply for
+          structural support. The middle layer is a development board from Crazy Bingo,
+          which I go more into later. The PCB that sits on top of that is the PCB which I
+          made and it houses the power system of the camera and serves as an interface
+          between Crazy Bingo's hardware and the cameras. As you can see, the cameras pop
+          out. Those PCBs that comprise the higher, 4<sup>th</sup> level is also made by
+          me. &nbsp;</p>
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=620
+          height=391 id="Picture 4" src="/contents/projects/UBC_SoC_Comp_Cam/image005.jpg"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 4: Dual Camera
+          Platform, top view</p>
+
+          
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=379
+          height=414 id="Picture 8" src="/contents/projects/UBC_SoC_Comp_Cam/image006.jpg"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 5:</p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Dual Camera Platform,
+          orthogonal view. You can see the different PCB layers.The main ones of interest
+          are the middle layer containing all the computational hardware the third layer
+          from the bottom which contains the power system and connects the cameras to the
+          middle layer</p>
+
+          
+
+          <p class=MsoNormal>Although the connections and routings of the PCB were
+          correct, the connectors which transport information from the third layer to the
+          cameras were too noisy for such as sensitive camera as Roy's.</p>
+
+          
+
+          <p class=MsoNormal>The commercial camera worked fine, but since the main point
+          of interest is Roy's CMOS camera, we must fall back to an earlier PCB due to
+          this foreseen circumstance. Like many engineers of the past, noise has gotten
+          the better of us.</p>
+
+          
+
+          <p class=MsoNormal>The earlier PCB was meant to house only Roy's CMOS camera,
+          so we changed the system and did some soldering work to amalgamate the
+          commercial camera to the platform.&nbsp; That is the reason behind why the
+          commercial camera is in a bit of an awkward position. </p>
+
+          
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=624
+          height=468 id="Picture 5" src="/contents/projects/UBC_SoC_Comp_Cam/image007.jpg"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 6: The dual
+          camera platform on a mount</p>
+
+          
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=623
+          height=623 id="Picture 6" src="/contents/projects/UBC_SoC_Comp_Cam/image008.jpg"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 7: The final
+          dual camera platform</p>
+
+
+          <h1>Part 2: Gaining Control of the Omnivision 5640 Commercial Camera</h1>
+
+          
+
+          
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=624
+          height=468 id="Picture 1" src="/contents/projects/UBC_SoC_Comp_Cam/image009.jpg"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 8: Crazy
+          Bingo's Development Board and the Omnivision 5640 Camera</p>
+
+          
+
+          <p class=MsoNormal>Gaining control of the commercial Omnivision 5640 compressed
+          a big chunk of my work. The development board I used is from Crazy Bingo. It is
+          a customized version of his commercial board made just for this project. This
+          is the middle layer of the camera platform. You can see how the pins of the
+          FPGA is threaded through the PCB into the connector pins on the sides of the
+          board. These pins connect to the cameras in the camera platform.</p>
+
+          
+
+          <p class=MsoNormal>To communicate with the Omnivision camera involves three
+          distinct stages. On the personal computer side, we require a GUI that allows us
+          to see the image being received. We must also have the ability to send commands
+          to the camera through the GUI. Next, we need to tell the USB controller what to
+          do when the computer sends the USB a command. We also need to setup the USB
+          controller properly in order to relay camera information to the computer at 24
+          fps. Last but not least, we need to design the hardware on the FPGA to
+          interpret the information received through the USB. Figure 9 is a block diagram
+          of the fundamental system.</p>
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=624
+          height=375 id="Picture 45" src="/contents/projects/UBC_SoC_Comp_Cam/image010.jpg"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 9: A block
+          diagram of the information flow throughout the camera system</p>
+
+          
+
+          <p class=MsoNormal>The GUI is written using Microsoft Foundation Class, which
+          is in C++. The modified ARM core of the USB controller is written in embedded
+          C, compiled and uploaded using &micro;Vision. The FPGA is programmed in Verilog and
+          compile on Quartus.</p>
+
+          
+
+          <p class=MsoNormal>I had the pleasure of writing all three codes involved in
+          this flow of information, but we need not go down the rabbit hole, so I shall
+          skip the USB and GUI code and just discuss my Verilog design at an abstract Register
+          Transfer Level (RTL).</p>
+
+          
+
+          <p class=MsoNormal>Shown in figure 10 is the RTL view of the top level Verilog
+          design.</p>
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=624
+          height=192 id="Picture 43" src="/contents/projects/UBC_SoC_Comp_Cam/image011.png"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 10: Verilog
+          design to control Omnivision Camera (Top level RTL view)</p>
+
+          <p class=MsoNormal>This design can be partitioned into several sections. I will
+          go through them quickly. First, the pins coming from the USB controller chip is
+          toggled based on the information the computer sends to the USB. These pins can
+          select different features to be activated. The selection circuitry is shown in
+          figures 11 - 13.</p>
+
+          
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=630
+          height=98 id="Picture 48" src="/contents/projects/UBC_SoC_Comp_Cam/image012.png"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 11: Selection
+          Circuit</p>
+
+          <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+
+          
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=253
+          height=152 id="Picture 49" src="/contents/projects/UBC_SoC_Comp_Cam/image013.png"><img
+          width=368 height=151 id="Picture 50"
+          src="/contents/projects/UBC_SoC_Comp_Cam/image014.png"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 12: Inside
+          advanced_feature_selection&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Figure
+          13: I2C module selection circuit</p>
+
+          <p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+
+          
+
+          <p class=MsoNormal>In figure 11, the USB signals come in from the left and goes
+          into the advanced_feature_selection module. Based on its outputs, the feature
+          selected may or may not require I2C. If it does, the USB signals also contains
+          which I2C information to send (as you can see, there are 7 different I2C Look
+          Up Tables). Once the specific I2C LUT is selected, the information-to-be-sent
+          is shoved into the i2c_driver module shown in figure 14. </p>
+
+          
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=624
+          height=237 id="Picture 51" src="/contents/projects/UBC_SoC_Comp_Cam/image015.png"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 14: I2C driver
+          module (including the 2-gate hack)</p>
+
+          
+
+          
+
+          <p class=MsoNormal>I did not write the I2C driver module, Crazy Bingo did, but
+          his module only serves as an initializer. Once the camera initialization is
+          complete, the i2c_drver shuts off, never to be used again. However, I need the
+          I2C driver to function whenever a feature is to be activated, so I looked over
+          CB's Verilog code and did a 2-gate hack. Which means that I simply added 2
+          gates, a XNOR and a AND, to make this I2C driver module reusable. I am quite
+          proud of my solution.</p>
+
+          <p class=MsoNormal>The GUI lists all the features made available for the
+          Omnivision camera.</p>
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=624
+          height=303 id="Picture 52" src="/contents/projects/UBC_SoC_Comp_Cam/image016.png"
+          alt="A screenshot of a social media post&#10;&#10;Description automatically generated"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 15: The MFC
+          GUI on the Computer</p>
+
+          
+
+          <p class=MsoNormal>Namely, the Omnivision camera can turn on its flash, it can
+          mirror or flip the image and it can toggle max and min zoom or, with the
+          slider, zoom at a resolution of <span
+          style='font-size:11.0pt;font-family:"Calibri",sans-serif;position:relative;
+          top:2.5pt'><img width=21 height=17 src="/contents/projects/UBC_SoC_Comp_Cam/image017.png"></span>(1024
+          incremental values between min and max zoom). On the software side which I did
+          not implement, it can display Gray or RGB pictures, it can perform software
+          mirror or flip and it can save images.</p>
+
+          
+
+          <p class=MsoNormal>Most importantly for Roy's CMOS camera chip, I also
+          implemented support for the Temporal and Spatial coded exposure, which were the
+          most difficult and time consuming features of them all. But before I discuss
+          that, please enjoy some saved pictures from the Omnivision Camera.</p>
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=312
+          height=234 id="Picture 3" src="/contents/projects/UBC_SoC_Comp_Cam/image018.jpg"><img
+          width=312 height=234 id="Picture 2"
+          src="/contents/projects/UBC_SoC_Comp_Cam/image019.jpg"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=311
+          height=233 id="Picture 19" src="/contents/projects/UBC_SoC_Comp_Cam/image020.jpg"><img
+          width=312 height=234 id="Picture 21"
+          src="/contents/projects/UBC_SoC_Comp_Cam/image021.jpg"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=311
+          height=233 id="Picture 23" src="/contents/projects/UBC_SoC_Comp_Cam/image022.jpg"><img
+          width=308 height=232 id="Picture 20"
+          src="/contents/projects/UBC_SoC_Comp_Cam/image023.jpg"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=308
+          height=232 id="Picture 22" src="/contents/projects/UBC_SoC_Comp_Cam/image024.jpg"><img
+          width=310 height=233 id="Picture 24"
+          src="/contents/projects/UBC_SoC_Comp_Cam/image025.jpg"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=310
+          height=232 id="Picture 25" src="/contents/projects/UBC_SoC_Comp_Cam/image026.jpg"><img
+          width=309 height=232 id="Picture 26"
+          src="/contents/projects/UBC_SoC_Comp_Cam/image027.jpg"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=310
+          height=232 id="Picture 18" src="/contents/projects/UBC_SoC_Comp_Cam/image028.jpg"><img
+          width=311 height=195 id="Picture 16"
+          src="/contents/projects/UBC_SoC_Comp_Cam/image029.jpg"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 16: Pictures
+          from the Omnivision Camera</p>
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h1>Part 3: Implementing Temporal and Spatial Coded Exposure</h1>
+
+          
+
+          <p class=MsoNormal>The exciting thing about Roy's CMOS camera is that you can
+          control whether each pixel will be exposed. This allows you to apply masks so
+          that only some pixels are exposed and others are not at any one time. The
+          applications of this is plenty, you can apply filters in such a way as to
+          produce an All-in-focus image, or you can do high motion imaging, or even
+          reconstructing short videos from a single long exposure shot. </p>
+
+          
+
+          <p class=MsoNormal>Temporal coding means that during exposure period, you can
+          expose or not expose the entire pixel array in predetermined sequence. This
+          predetermined sequence is stored as 1s and 0s in a text file on the computer,
+          where 1 bit encodes an entire mask. Temporal coding was not terribly difficult
+          to implement, since only a maximum of 1000 or so masks can be applied during
+          the exposure period, all of that data can be stored in the FPGA RAM. </p>
+
+          
+
+          
+
+          
+
+          <p class=MsoNormal>Spatial coding is a different matter. Each pixel requires a
+          single bit to encode, so that's 128 x 128 bits for just one mask, which, by
+          itself, just manages to exceed the RAM size of the FPGA. Again, a maximum of
+          1000 masks can be applied during exposure period so I am required to use the
+          onboard SDRAM. Thankfully, I was given Crazy Bingo's rather complex sdram
+          driver Verilog module.</p>
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=624
+          height=273 id="Picture 39" src="/contents/projects/UBC_SoC_Comp_Cam/image030.png"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 17:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Crazy
+          Bingo's SDRAM driver module</p>
+
+          
+
+          <p class=MsoNormal>I found his SDRAM difficult to use, as it was built with a
+          different purpose than the way I intended to use it, but after much
+          hypothesizing and testing, I finally wrote two FSM, which are certainly the
+          proudest FSMs I have ever written, that successfully wrote the Spatial Masks
+          into the SDRAM.</p>
+
+          
+
+          <p class=MsoNormal>In short, after the spatial mask feature is selected (from
+          the GUI), information from the text files are sent to a 16 bit buffer created
+          within the FPGA. Then, the 16 bits are written into the SDRAM. This process
+          repeats until every mask has been written into the SDRAM. Of course, I also
+          implemented the reading module to retrieve the data, but those are not
+          interesting because it is just a collection of divided clocks.</p>
+
+          
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=305
+          height=187 id="Picture 37" src="/contents/projects/UBC_SoC_Comp_Cam/image031.png"><img
+          width=314 height=177 id="Picture 38"
+          src="/contents/projects/UBC_SoC_Comp_Cam/image032.png"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 18: On board
+          16 bit buffer with a FSM (left) and another FSM for writing into the SDRAM</p>
+
+          
+
+          
+
+          <p class=MsoNormal>I verified the temporal mask feature by observing the
+          expected signals on Quartus' SignalTap Logic Analyzer. The only way to verify
+          the spatial mask feature is to generate some masks and, using the same code
+          used for displaying the video feed from the Omnivision camera, display the
+          spatial masks on the GUI.</p>
+
+          
+
+          <p class=MsoNormal>First, how do I generate masks to verify that I implemented
+          spatial masking properly? These masks must be antisymmetric, so any issues can
+          be easily seen. How do I generate multiple antisymmetric masks without it being
+          a huge burden on my time? Here I took inspiration from the field of cellular
+          automatons. I am aware of works like Wolfram and Conway which shows that given
+          a few simple rules, slightly different initial conditions can lead to vastly
+          different outcomes. As one can see from my python code, I used something
+          similar to Wolfram's rule 30.</p>
+
+          
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=624
+          height=224 id="Picture 17" src="/contents/projects/UBC_SoC_Comp_Cam/image033.png"
+          alt="A picture containing screenshot&#10;&#10;Description automatically generated"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 19:&nbsp;&nbsp;
+          The rules I used to evolve my images from easily code-able initial conditions
+          (not shown)</p>
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=309
+          height=232 id="Picture 12" src="/contents/projects/UBC_SoC_Comp_Cam/image034.jpg"><img
+          width=309 height=232 id="Picture 13"
+          src="/contents/projects/UBC_SoC_Comp_Cam/image035.jpg"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=309
+          height=232 id="Picture 15" src="/contents/projects/UBC_SoC_Comp_Cam/image036.jpg"><img
+          width=311 height=233 id="Picture 14"
+          src="/contents/projects/UBC_SoC_Comp_Cam/image037.jpg"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 20: All four
+          masks came from the same rule (different initial conditions of course)</p>
+
+          
+
+          
+
+          <p class=MsoNormal>Although all 4 masks came from the same rule, it still
+          amazes me how different the top left mask is compare to the other three. The
+          top right mask is also interesting, and it being a grid-like made it an
+          extremely useful image to verify the spatial mask implementation. These masks
+          have VGA resolution because the Omnivision camera also has VGA resolution, so
+          the rest of the system is setup to receive videos of that resolution. Also, the
+          way I implemented spatial masking made switching the dimensions of the mask to
+          128 x 128 a trivial matter.</p>
+
+          
+
+          <p class=MsoNormal>I also made a mask containing 7 segment displays to verify
+          that the implementation can hold the number of masks it is expected to hold. It
+          is verified to hold 107 VGA masks or equivalently, about 2000 masks of 128 x
+          128 dimensionality. Figure 21 shows what the numbered masks look like.</p>
+
+          
+
+          <p class=MsoNormal align=center style='text-align:center'><img width=344
+          height=260 id="Picture 30" src="/contents/projects/UBC_SoC_Comp_Cam/image038.png"></p>
+
+          <p class=MsoNormal align=center style='text-align:center'>Figure 21: A VGA
+          numbered mask</p>
+
+          
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://medium.com/@jackyruthjiang">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-medium fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/yuzheng-jiang/">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/jackyruth">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Jacky Jiang 2019</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="/js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
