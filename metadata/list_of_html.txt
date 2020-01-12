@@ -1,3 +1,5 @@
 contents/*
 index.html
 contact.html
+metadata/templates/template_project.html
+metadata/templates/template_writing.html

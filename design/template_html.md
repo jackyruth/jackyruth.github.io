@@ -29,3 +29,7 @@ The script should ignore the *title* at the top, it is nice to have a custom tit
 
 **2019-12-29 UPDATE:** Since this is hosted on github pages, the php backend of the *contact.html* doesn't work. Instead, I will be implementing this static html form found on [Github](https://github.com/toperkin/staticFormEmails). This also means that I can add the brand new contact.html to the *list_of_html.txt* file.
 
+## Other HTML template files
+
+In order to keep the tone and navigation of the website consistent, I have created html template files where I can simply copy paste my content into. As of Jan 12, 2020, I have added the *template_project.html* and the *template_writing.html*. They are the same template right now but that could change in the future. Eventually, I expect more template files to be added.
+
